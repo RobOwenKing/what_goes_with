@@ -1,4 +1,4 @@
 class Ingredient < ApplicationRecord
-  validates :name, presence: true
+  validates :name, presence: true, uniqueness: true
   validates :colour, presence: true
 end

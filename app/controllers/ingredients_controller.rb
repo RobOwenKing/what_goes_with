@@ -4,7 +4,7 @@ class IngredientsController < ApplicationController
   end
 
   def show
-    @ingredient = Ingredient.find(params[:id])
+    @ingredient = Ingredient.find_by(name: params[:name].capitalize)
   end
 
   def new
