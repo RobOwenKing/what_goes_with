@@ -1,0 +1,18 @@
+Now
+  Pairs model
+    Create model
+    Show page
+  Reviews model
+    Create model
+    Display on reviews page
+    New and Create routes
+
+Later
+  Ingredients Model
+    Add descriptions
+    SeeAlso model for related ingredients
+  Reviews Model
+    Edit and Update routes
+    Delete route
+
+Way Later
