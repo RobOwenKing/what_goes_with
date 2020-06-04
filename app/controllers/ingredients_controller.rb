@@ -5,6 +5,7 @@ class IngredientsController < ApplicationController
 
   def show
     @ingredient = Ingredient.find_by(name: params[:name].capitalize)
+    raise
   end
 
   def new

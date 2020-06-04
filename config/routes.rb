@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'pairs/show'
+  get 'pairs/create'
   devise_for :users
   root to: 'pages#home'
 
