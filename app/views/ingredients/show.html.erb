@@ -1,2 +1,6 @@
-<h1><%= @ingredient.name %></h1>
-<p>Find me in app/views/foods/show.html.erb</p>
+<h1>What goes with <%= @ingredient.name %></h1>
+<ul>
+  <% @ingredient.pairs.each do |pair| %>
+    <li><%= @ingredient == pair.ingredient_1 ? pair.ingredient_2.name : pair.ingredient_1.name %> </li>
+  <% end %>
+</ul>
