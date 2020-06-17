@@ -1,3 +1,6 @@
-<h1><%= @pair.ingredient_1.name %> and <%= @pair.ingredient_2.name %></h1>
+<h1>
+  <span style="color:<%= @pair.ingredient_1.colour %>"><%= @pair.ingredient_1.name %></span>
+   and
+   <span style="color:<%= @pair.ingredient_2.colour %>"><%= @pair.ingredient_2.name %></span>
+</h1>
 <p>Find me in app/views/pairs/show.html.erb</p>
-
