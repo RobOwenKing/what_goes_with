@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_06_09_114613) do
+ActiveRecord::Schema.define(version: 2020_06_17_184125) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -28,6 +28,11 @@ ActiveRecord::Schema.define(version: 2020_06_09_114613) do
     t.bigint "ingredient_2_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer "classic", default: 0
+    t.integer "different", default: 0
+    t.integer "average", default: 0
+    t.integer "bad", default: 0
+    t.string "overall"
     t.index ["ingredient_1_id"], name: "index_pairs_on_ingredient_1_id"
     t.index ["ingredient_2_id"], name: "index_pairs_on_ingredient_2_id"
   end

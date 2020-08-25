@@ -3,4 +3,9 @@
    and
    <span style="color:<%= @pair.ingredient_2.colour %>"><%= @pair.ingredient_2.name %></span>
 </h1>
-<p>Find me in app/views/pairs/show.html.erb</p>
+<ul>
+  <li>Classic combo: <%= @pair.classic %></li>
+  <li>Something different: <%= @pair.different %></li>
+  <li>So-so: <%= @pair.average %></li>
+  <li>Bad idea: <%= @pair.bad %></li>
+</ul>
