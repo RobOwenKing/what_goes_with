@@ -1,6 +1,7 @@
-<h1>What goes with <%= @ingredient.name %></h1>
-<ul>
-  <% @ingredient.pairs.each do |pair| %>
-    <li><%= @ingredient == pair.ingredient_1 ? pair.ingredient_2.name : pair.ingredient_1.name %> </li>
+<h1>What goes with <%= @ingredient.name %>?</h1>
+
+<% @ingredient.pairs.each do |pair| %>
+  <%= link_to pair_path(pair), class: "card" do %>
+    <h4><%= @ingredient == pair.ingredient_1 ? pair.ingredient_2.name : pair.ingredient_1.name %></h4>
   <% end %>
-</ul>
+<% end %>
