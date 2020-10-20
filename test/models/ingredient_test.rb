@@ -1,22 +1,21 @@
 require 'test_helper'
 
 class IngredientTest < ActiveSupport::TestCase
-  test "Ingredients must have a name" do
+  test "ingredients must have a name" do
     ingredient = Ingredient.new(colour: '#FFFFFF')
     ingredient.valid?
-    assert_not_empty ingredient.errors[:name]
+    assert_not ingredient.errors[:name].empty?
   end
 
-  test "Ingredient names must be unique" do
-    Ingredient.create(name: 'Aubergine', colour: '#FFFFFF')
-    ingredient = Ingredient.new(name: 'Aubergine', colour: '#FFFFFF')
+  test "ingredient names must be unique" do
+    ingredient = Ingredient.new(name: 'Aubergine', colour: '#000000')
     ingredient.valid?
-    assert_not_empty ingredient.errors[:name]
+    assert_not ingredient.errors[:name].empty?
   end
 
-  test "Ingredients must have a colour" do
+  test "ingredients must have a colour" do
     ingredient = Ingredient.new(name: 'Mint')
     ingredient.valid?
-    assert_not_empty ingredient.errors[:colour]
+    assert_not ingredient.errors[:colour].empty?
   end
 end
