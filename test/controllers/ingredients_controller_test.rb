@@ -3,7 +3,7 @@ require 'test_helper'
 class IngredientsControllerTest < ActionDispatch::IntegrationTest
   test "should get index" do
     get ingredients_url
-    assert_response :success
+    assert_response :success, "Ingredients home page should exist"
   end
 
   # test "should get show" do
